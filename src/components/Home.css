@@ -1,0 +1,153 @@
+.homeContainer {
+  background-image: url("../assets/bg.png");
+  height: calc(100vh - 80px);
+
+  text-align: left;
+  padding: 0 100px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.homeTitle {
+  font-size: 54px;
+  font-weight: 300;
+  color: #f5f5f5;
+}
+
+.homeSubtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: #c4ebc8;
+  margin-top: 18px;
+  margin-bottom: 36px;
+}
+
+.homeButton {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  background-color: #c4ebc8;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 8px 20px;
+}
+
+.homeButton:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in all;
+}
+
+.homeFeatures {
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.homeFeatureQuote {
+  color: #141a17;
+}
+
+.homeFeature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 28%;
+}
+
+.homeFeatureTitle {
+  margin: 10px 0;
+}
+
+.homeTestimonials {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeTestimonialsTitle {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #141a17;
+}
+
+.homeTestimonialsSubtitle {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 36px;
+  color: #141a17;
+}
+
+.homeTestimonialsBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.testimonial {
+  text-align: left;
+  width: 28%;
+  padding: 30px;
+  border: 3px solid #141a17;
+}
+
+.testimonialName {
+  font-size: 22px;
+}
+
+.testimonialNick {
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+  margin-bottom: 12px;
+}
+
+.testimonialFunction {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 36px;
+}
+
+@media only screen and (max-width: 998px) {
+  .homeTestimonialsBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .testimonial {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homeContainer {
+    padding: 0 40px;
+  }
+  .homeFeatures {
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px 40px;
+  }
+  .homeFeature {
+    width: 60%;
+  }
+  .homeTestimonials {
+    padding: 100px 40px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .homeContainer {
+    padding: 0 20px;
+  }
+  .homeFeatures {
+    padding: 100px 20px;
+  }
+  .homeTestimonials {
+    padding: 100px 20px;
+  }
+}

@@ -1,4 +1,4 @@
-.navbar-container {
+.navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,35 +8,41 @@
 
   font-size: 22px;
   background-color: #141a17;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
-.navbar-links {
+.navbarLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
 }
 
-.navbar-link {
+.navbarLink {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
 }
 
+.navbarLink:nth-child(2):hover,
+.navbarLink:nth-child(3):hover {
+  color: #c4ebc8;
+}
+
 @media only screen and (max-width: 600px) {
-  .navbar-container {
+  .navbarContainer {
     padding: 0 40px;
   }
-  .navbar-links {
+  .navbarLinks {
     gap: 10px;
   }
-  .navbar-cart {
+  .navbarCart {
     margin-left: 10px;
   }
 }
 
 @media only screen and (max-width: 300px) {
-  .navbar-container {
+  .navbarContainer {
     padding: 0 20px;
     font-size: 16px;
   }

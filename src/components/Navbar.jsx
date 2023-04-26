@@ -5,30 +5,21 @@ import "../components/Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar-container">
-      <div className="navbar-links">
-        {/* <Link className="navbar-link" to="/">
-          <ShoppingBagOpen size={35} color="white" />
+    <nav className="navbarContainer">
+      <div className="navbarLinks">
+        <Link className="navbarLink" to="/">
+          <ShoppingBagOpen className="shoppingBag" size={35} color="white" />
         </Link>
-        <Link className="navbar-link" to="/">
+        <Link className="navbarLink" to="/">
           Home
         </Link>
-        <Link className="navbar-link" to="/">
+        <Link className="navbarLink" to="/">
           Catalogue
-        </Link> */}
-        <a className="navbar-link" href="/">
-          <ShoppingBagOpen size={35} color="white" />
-        </a>
-        <a className="navbar-link" href="/">
-          Home
-        </a>
-        <a className="navbar-link" href="/">
-          Catalogue
-        </a>
+        </Link>
       </div>
-      <div className="navbar-cart">
-        <a href="/" className="navbar-link">
-          <ShoppingCart className="shopping-cart" size={35} color="white" />
+      <div className="navbarCart">
+        <a href="/" className="navbarLink">
+          <ShoppingCart className="shoppingCart" size={35} color="white" />
         </a>
       </div>
     </nav>
