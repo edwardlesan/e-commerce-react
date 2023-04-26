@@ -1,0 +1,43 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 100px;
+  height: 80px;
+
+  font-size: 22px;
+  background-color: #141a17;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-container {
+    padding: 0 40px;
+  }
+  .navbar-links {
+    gap: 10px;
+  }
+  .navbar-cart {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .navbar-container {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+}
