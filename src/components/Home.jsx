@@ -21,7 +21,7 @@ const Home = () => {
 
       <div className="homeFeatures">
         <div className="homeFeature">
-          <Percent size={50} color="#c4ebc8" />
+          <Percent size={50} color="black" />
           <h3 className="homeFeatureTitle">FAIR PRICES</h3>
           <p className="homeFeatureDesc">
             By selling directly to you from our factories, you get a high-end
@@ -29,7 +29,7 @@ const Home = () => {
           </p>
         </div>
         <div className="homeFeature">
-          <HandHeart size={50} color="#c4ebc8" />
+          <HandHeart size={50} color="black" />
           <h3 className="homeFeatureTitle">MADE WITH INTEGRITY</h3>
           <p className="homeFeatureDesc">
             We wouldn't sell anything we wouldn't use on our own, the products
@@ -37,7 +37,7 @@ const Home = () => {
           </p>
         </div>
         <div className="homeFeature">
-          <SealCheck size={50} color="#c4ebc8" />
+          <SealCheck size={50} color="black" />
           <h3 className="homeFeatureTitle">HAPPINESS GUARANTEED</h3>
           <p className="homeFeatureDesc">
             We give you a full 60 days to make sure you absolutely love your
