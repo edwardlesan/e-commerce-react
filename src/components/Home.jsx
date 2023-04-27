@@ -61,12 +61,7 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Adipisci repellendus corrupti accusantium nobis vel cum autem
                 modi dolore architecto enim. Delectus odio fugiat quas laborum
-                id obcaecati incidunt nobis optio! Adipisci repellendus corrupti
-                accusantium nobis vel cum autem modi dolore architecto enim.
-                Delectus odio fugiat quas laborum id obcaecati incidunt nobis
-                optio! Adipisci repellendus corrupti accusantium nobis vel cum
-                autem modi dolore architecto enim. Delectus odio fugiat quas
-                laborum id obcaecati incidunt nobis optio!
+                id obcaecati incidunt nobis optio!
               </p>
             </div>
             <div className="testimonial">
@@ -77,12 +72,7 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Adipisci repellendus corrupti accusantium nobis vel cum autem
                 modi dolore architecto enim. Delectus odio fugiat quas laborum
-                id obcaecati incidunt nobis optio! Adipisci repellendus corrupti
-                accusantium nobis vel cum autem modi dolore architecto enim.
-                Delectus odio fugiat quas laborum id obcaecati incidunt nobis
-                optio! Adipisci repellendus corrupti accusantium nobis vel cum
-                autem modi dolore architecto enim. Delectus odio fugiat quas
-                laborum id obcaecati incidunt nobis optio!
+                id obcaecati incidunt nobis optio!
               </p>
             </div>
             <div className="testimonial">
@@ -93,20 +83,11 @@ const Home = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Adipisci repellendus corrupti accusantium nobis vel cum autem
                 modi dolore architecto enim. Delectus odio fugiat quas laborum
-                id obcaecati incidunt nobis optio! Adipisci repellendus corrupti
-                accusantium nobis vel cum autem modi dolore architecto enim.
-                Delectus odio fugiat quas laborum id obcaecati incidunt nobis
-                optio! Adipisci repellendus corrupti accusantium nobis vel cum
-                autem modi dolore architecto enim. Delectus odio fugiat quas
-                laborum id obcaecati incidunt nobis optio!
+                id obcaecati incidunt nobis optio!
               </p>
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="homeBottom">
-        <div className="homeClippath"></div>
       </section>
     </>
   );
