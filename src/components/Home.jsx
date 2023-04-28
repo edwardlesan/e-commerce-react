@@ -1,7 +1,15 @@
 import React from "react";
 import "../components/Home.css";
 import { Link } from "react-router-dom";
-import { Percent, HandHeart, SealCheck } from "@phosphor-icons/react";
+import {
+  Percent,
+  HandHeart,
+  SealCheck,
+  MapTrifold,
+  Envelope,
+  Phone,
+  Clock,
+} from "@phosphor-icons/react";
 
 const Home = () => {
   return (
@@ -86,6 +94,53 @@ const Home = () => {
                 id obcaecati incidunt nobis optio!
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="homeContact">
+        <div className="contactBanner">
+          <h3 className="bannerTitle">#lets_talk</h3>
+          <h5 className="bannerText">
+            Leave a message, we love to hear from you!
+          </h5>
+        </div>
+        <div className="contactContent">
+          <div className="contactAddress">
+            <p>GET IN TOUCH</p>
+            <h2>Visit one of our agency locations or contact us today</h2>
+            <div className="contactList">
+              <li>
+                <MapTrifold size={16}></MapTrifold>
+                <p>510 Downers Groove, Street 65, Chicago</p>
+              </li>
+              <li>
+                <Envelope size={16}></Envelope>
+                <p>shopping@gmail.com</p>
+              </li>
+              <li>
+                <Phone size={16}></Phone>
+                <p>+01 2222 365 / (+91) 01 2345 6789</p>
+              </li>
+              <li>
+                <Clock size={16}></Clock>
+                <p>10:00 - 18:00. Mon - Sat</p>
+              </li>
+            </div>
+          </div>
+          <div className="contactMessage">
+            <form>
+              <p>Leave a message</p>
+              <h2>We love to hear from you</h2>
+              <input type="text" placeholder="Name & Surname"></input>
+              <input type="email" placeholder="E-mail"></input>
+              <textarea
+                cols="30"
+                rows="10"
+                placeholder="Your message"
+              ></textarea>
+              <button className="homeButton">Send Message</button>
+            </form>
           </div>
         </div>
       </section>

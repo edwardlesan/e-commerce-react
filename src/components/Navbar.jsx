@@ -13,14 +13,14 @@ const Navbar = () => {
         <Link className="navbarLink" to="/">
           Home
         </Link>
-        <Link className="navbarLink" to="/">
+        <Link className="navbarLink" to="/catalogue">
           Catalogue
         </Link>
       </div>
       <div className="navbarCart">
-        <a href="/" className="navbarLink">
+        <Link to="/" className="navbarLink">
           <ShoppingCart className="shoppingCart" size={35} color="white" />
-        </a>
+        </Link>
       </div>
     </nav>
   );
