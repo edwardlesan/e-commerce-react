@@ -22,11 +22,14 @@ const notify = () => {
 
 const Catalogue = () => {
   const [product, setProduct] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getProducts = async () => {
+    setLoading(true);
     const res = await axios.get("https://fakestoreapi.com/products");
     const data = res.data;
     setProduct(data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -45,56 +48,75 @@ const Catalogue = () => {
     globalState.setTotalQuantity(totalQuantity);
   }, [totalQuantity]);
 
-  return (
-    <div className="catalogue">
-      <div className="catalogueBanner">
-        <h3 className="bannerTitle">#stayhome</h3>
-        <h5 className="bannerText">
-          Save more money with coupons &amp; up to 60% off!
-        </h5>
-      </div>
-      <div className="catalogueProducts">
-        {product.map((item, index) => {
-          item.quantity = 1;
-          return (
-            <>
-              <div className="catalogueProduct" key={index}>
-                <Link to="/">
-                  <img
-                    src={item.image}
-                    alt="product-img"
-                    className="productImage"
-                  ></img>
-                </Link>
-                <div className="productContainer">
-                  <h4 className="productTitle">{item.title}</h4>
-                  <div className="productPriceBox">
-                    <p className="productPrice">
-                      <b>${item.price}</b>
-                    </p>
-                    <button
-                      onClick={() => {
-                        dispatch({ type: "ADD", payload: item });
-                        notify();
-                        totalQuantity++;
-                      }}
-                      className="addToCart"
-                    >
-                      <ShoppingCart
-                        className="shoppingCart"
-                        size={22}
-                        color="#141a17"
-                      />
-                    </button>
+  function LoadingSpinner() {
+    return (
+      <section class="ctnr">
+        <div class="ldr">
+          <div class="ldr-blk"></div>
+          <div class="ldr-blk an_delay"></div>
+          <div class="ldr-blk an_delay"></div>
+          <div class="ldr-blk"></div>
+        </div>
+      </section>
+    );
+  }
+
+  const ShowProducts = () => {
+    return (
+      <div className="catalogue">
+        <div className="catalogueBanner">
+          <h3 className="bannerTitle">#stayhome</h3>
+          <h5 className="bannerText">
+            Save more money with coupons &amp; up to 60% off!
+          </h5>
+        </div>
+        <div className="catalogueProducts">
+          {product.map((item, index) => {
+            item.quantity = 1;
+            return (
+              <>
+                <div className="catalogueProduct" key={index}>
+                  <Link to="/">
+                    <img
+                      src={item.image}
+                      alt="product-img"
+                      className="productImage"
+                    ></img>
+                  </Link>
+                  <div className="productContainer">
+                    <h4 className="productTitle">{item.title}</h4>
+                    <div className="productPriceBox">
+                      <p className="productPrice">
+                        <b>${item.price}</b>
+                      </p>
+                      <button
+                        onClick={() => {
+                          dispatch({ type: "ADD", payload: item });
+                          notify();
+                          totalQuantity++;
+                        }}
+                        className="addToCart"
+                      >
+                        <ShoppingCart
+                          className="shoppingCart"
+                          size={22}
+                          color="#141a17"
+                        />
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <ToastContainer />
-            </>
-          );
-        })}
+                <ToastContainer />
+              </>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    );
+  };
+
+  return (
+    <div className="row">{loading ? <LoadingSpinner /> : <ShowProducts />}</div>
   );
 };
 
