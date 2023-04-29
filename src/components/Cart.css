@@ -1,0 +1,97 @@
+.cartContainer {
+  padding: 40px 100px;
+  height: calc(100vh - 80px);
+}
+
+.cartTitle {
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.noProdsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.noProdsMsg {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.cartProductCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartProductImg {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.cartProductCard p {
+  width: 200px;
+  font-size: 18px;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quantity p {
+  width: 30px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cartProductCard h2 {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.cartProductCard h2:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s all;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+
+.total p {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 600px) {
+  .cartContainer {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .cartContainer {
+    padding: 40px 20px;
+  }
+}

@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import "./Catalogue.css";
+import { ShoppingCart } from "phosphor-react";
+import { Cartcontext } from "./Context";
 
 const notify = () => {
   toast.success("Product added to cart!", {
@@ -31,6 +33,18 @@ const Catalogue = () => {
     getProducts();
   }, []);
 
+  const globalState = useContext(Cartcontext);
+  const state = globalState.state;
+  const dispatch = globalState.dispatch;
+
+  var totalQuantity = state.reduce((totalQuantity, item) => {
+    return totalQuantity + item.quantity;
+  }, 0);
+
+  useEffect(() => {
+    globalState.setTotalQuantity(totalQuantity);
+  }, [totalQuantity]);
+
   return (
     <div className="catalogue">
       <div className="catalogueBanner">
@@ -54,24 +68,24 @@ const Catalogue = () => {
                 </Link>
                 <div className="productContainer">
                   <h4 className="productTitle">{item.title}</h4>
-                  <p className="productDesc">{item.description}</p>
                   <div className="productPriceBox">
                     <p className="productPrice">
                       <b>${item.price}</b>
                     </p>
-                    <div className="productButtons">
-                      <Link to="/" className="viewItem">
-                        View Product
-                      </Link>
-                      <button
-                        onClick={() => {
-                          notify();
-                        }}
-                        className="addToCart"
-                      >
-                        Add to Cart
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => {
+                        dispatch({ type: "ADD", payload: item });
+                        notify();
+                        totalQuantity++;
+                      }}
+                      className="addToCart"
+                    >
+                      <ShoppingCart
+                        className="shoppingCart"
+                        size={22}
+                        color="#141a17"
+                      />
+                    </button>
                   </div>
                 </div>
               </div>

@@ -29,6 +29,25 @@
   color: #c4ebc8;
 }
 
+.cartProdNr {
+  height: 30px;
+  width: 30px;
+  font-size: 14px;
+
+  position: absolute;
+  top: 10px;
+  right: 88px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #141a17;
+  background-color: #c4ebc8;
+  border: 1px solid #c4ebc8;
+  border-radius: 50px;
+}
+
 @media only screen and (max-width: 600px) {
   .navbarContainer {
     padding: 0 40px;
@@ -39,11 +58,19 @@
   .navbarCart {
     margin-left: 10px;
   }
+
+  .cartProdNr {
+    right: 28px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
   .navbarContainer {
     padding: 0 20px;
     font-size: 16px;
+  }
+
+  .cartProdNr {
+    right: 8px;
   }
 }

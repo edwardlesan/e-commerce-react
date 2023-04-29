@@ -22,7 +22,7 @@ const Home = () => {
             <h5 className="homeSubtitle">
               Save more with coupons &amp; up to 60% off!
             </h5>
-            <Link className="homeButton" to="/">
+            <Link className="homeButton" to="/catalogue">
               Shop Now
             </Link>
           </div>
