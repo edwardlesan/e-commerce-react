@@ -139,9 +139,7 @@ const Home = () => {
                 rows="10"
                 placeholder="Your message"
               ></textarea>
-              <button className="homeButton" onClick={alert("Message sent!")}>
-                Send Message
-              </button>
+              <button className="homeButton">Send Message</button>
             </form>
           </div>
         </div>
