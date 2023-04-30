@@ -76,7 +76,7 @@ const Catalogue = () => {
             return (
               <>
                 <div className="catalogueProduct" key={index}>
-                  <Link to="/">
+                  <Link to={`/${item.id}`}>
                     <img
                       src={item.image}
                       alt="product-img"
@@ -106,7 +106,6 @@ const Catalogue = () => {
                     </div>
                   </div>
                 </div>
-                <ToastContainer />
               </>
             );
           })}
@@ -116,7 +115,12 @@ const Catalogue = () => {
   };
 
   return (
-    <div className="row">{loading ? <LoadingSpinner /> : <ShowProducts />}</div>
+    <div>
+      <div className="row">
+        {loading ? <LoadingSpinner /> : <ShowProducts />}
+      </div>
+      <ToastContainer />
+    </div>
   );
 };
 
